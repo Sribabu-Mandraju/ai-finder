@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-
+import Card from "../shared/Card";
 const products = [
   {
     title: "Investing LLM Model",
@@ -32,7 +32,7 @@ const Product: React.FC = () => {
       <h2 className="text-white text-3xl font-bold text-center mb-6">
         OUR PRODUCTS
       </h2>
-      <div className="relative flex flex-col md:flex-row items-center bg-gradient-to-br from-[#0F172A] to-[#1E293B] shadow-lg rounded-xl p-6 md:p-10">
+      <Card>
         {/* Left Content */}
         <div className="md:w-1/2 text-center md:text-left">
           <h3 className="text-blue-400 text-2xl font-semibold">
@@ -68,7 +68,7 @@ const Product: React.FC = () => {
             className="w-full max-w-md rounded-lg shadow-lg"
           />
         </div>
-      </div>
+        </Card>
     </div>
   );
 };

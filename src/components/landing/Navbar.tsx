@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import tasklogo from "../../assets/tasklogo.svg";
 import { RiMenu2Fill } from "react-icons/ri";
 
@@ -24,16 +25,20 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <div className="flex w-screen h-screen bg-gray-900">
-      <header className="flex items-center w-full my-6 h-max flex-row justify-between mx-8 md:mx-14">
+    <div className="flex w-full  mx-auto justify-center items-center  ">
+      <header className="fixed top-0  max-w-6xl mx-auto flex items-center w-full h-[80px] py-4  h-max flex-row justify-between mx-8  z-50">
         {/* Logo */}
-        <div>
-          <img src={tasklogo} alt="Task Logo" className="md:w-auto md:h-auto w-[50%]" />
+        <div className="mx-2" onClick={() => window.location.href = '/'}>
+          <img
+            src={tasklogo}
+            alt="Task Logo"
+            className="md:w-auto mx-2 w-[100px] h-[50px]"
+          />
         </div>
 
         {/* Desktop Navigation */}
         <nav
-          className="hidden lg:flex flex-row p-[19px] px-16 shadow-white/30 shadow-inner 
+          className="hidden lg:flex flex-row p-[13px] px-16 shadow-white/30 shadow-inner 
           text-white gap-12 text-xl border-opacity-5 rounded-[25px] backdrop-blur-xl bg-white/5 
           border h-full border-white/20"
         >
@@ -41,7 +46,11 @@ const Navbar: React.FC = () => {
             <a
               key={index}
               href={data.href}
-              className={`${data.label === "Testnet" ? "text-gray-500 font-semibold" : "text-white"}`}
+              className={`${
+                data.label === "Testnet"
+                  ? "text-gray-500 font-semibold"
+                  : "text-white"
+              }`}
             >
               {data.label}
             </a>
@@ -60,27 +69,39 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Mobile Navigation Menu */}
-        {isMobileMenuOpen && (
-          <div
-            className="fixed left-2 top-16 backdrop-blur-xl shadow-white/30 shadow-inner bg-gray-900 
-            border h-[90vh] border-white/40 bottom-0 w-64 text-white p-4 transform transition-transform 
-            duration-300 ease-in-out z-50 lg:hidden overflow-y-auto"
-          >
-            <nav className="flex flex-col justify-start gap-2">
-              {navItems.map((item, index) => (
-                <a
-                  key={index}
-                  href={item.href}
-                  className={`flex items-center gap-2 py-2 px-3 rounded-md transition-colors duration-200 
-                    ${item.label === "Testnet" ? "text-gray-500 font-semibold" : "text-white"}`}
-                  onClick={toggleMobileMenu}
-                >
-                  {item.label}
-                </a>
-              ))}
-            </nav>
-          </div>
-        )}
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div
+              initial={{ x: -300, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: -300, opacity: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="fixed left-2 top-16 backdrop-blur-xl shadow-white/30 shadow-inner bg-gray-900 
+              border h-[90vh] border-white/40 bottom-0 w-64 text-white p-4 transform transition-transform 
+              duration-300 ease-in-out z-50 lg:hidden overflow-y-auto"
+            >
+              <nav className="flex flex-col justify-start gap-2">
+                {navItems.map((item, index) => (
+                  <motion.a
+                    key={index}
+                    href={item.href}
+                    className={`flex items-center gap-2 py-2 px-3 rounded-md transition-colors duration-200 
+                      ${
+                        item.label === "Testnet"
+                          ? "text-gray-500 font-semibold"
+                          : "text-white"
+                      }`}
+                    onClick={toggleMobileMenu}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    {item.label}
+                  </motion.a>
+                ))}
+              </nav>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </header>
     </div>
   );
