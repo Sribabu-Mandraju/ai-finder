@@ -16,12 +16,12 @@ const Navbar: React.FC = () => {
   };
 
   const navItems: NavItem[] = [
-    { label: "Home", href: "#" },
-    { label: "Products", href: "#" },
-    { label: "Tokenomics", href: "#" },
-    { label: "Roadmap", href: "#" },
-    { label: "Docs", href: "#" },
-    { label: "Testnet", href: "#" },
+    { label: "Home", href: "#Home" },
+    { label: "Products", href: "#Products" },
+    { label: "Tokenomics", href: "#Tokenomics" },
+    { label: "Roadmap", href: "#Roadmap" },
+    { label: "Docs", href: "#Docs" },
+    { label: "Testnet", href: "#Testnet" },
   ];
 
   return (
@@ -61,10 +61,10 @@ const Navbar: React.FC = () => {
         <div className="md:hidden flex text-white text-2xl">
           <button
             onClick={toggleMobileMenu}
-            className="lg:hidden text-white transition-colors duration-200"
+            className="lg:hidden text-white mx-2 transition-colors duration-200"
             aria-label="Toggle mobile menu"
           >
-            <RiMenu2Fill size={24} />
+            <RiMenu2Fill  size={24} />
           </button>
         </div>
 

@@ -4,7 +4,7 @@ import arrow2 from "../../assets/arrow2.png";
 
 const Roadmap: React.FC = () => {
   return (
-    <div className="w-full max-w-7xl mx-auto">
+    <div className="w-full max-w-7xl mx-auto" id="Roadmap">
       <div className="flex flex-col gap-6 px-10 lg:px-20">
         <div className="text-white text-4xl my-12 text-center">ROADMAP</div>
         <div className="grid md:grid-cols-3 grid-cols-1 gap-4 lg:gap-8">
