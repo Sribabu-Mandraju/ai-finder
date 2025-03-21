@@ -1,16 +1,29 @@
 import Card from "../shared/Card";
-import sysImg from "../../assets/sys.png";
+import sysImg from "../../assets/aitrans.png";
+
 const System = () => {
   return (
     <>
-      <div className="text-white text-4xl my-12 text-center" id="System">
-        System Operation
+      {/* Section Title */}
+     
+
+      {/* Image Container */}
+      <div className="flex flex-col lg:flex-row items-center justify-center w-full px-6 py-10">
+        <div className="relative w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] rounded-full overflow-hidden border-4 border-teal-500 shadow-glow">
+          {/* Glow Effect */}
+          <div className="absolute inset-0 rounded-full bg-teal-500 opacity-20 blur-2xl animate-pulse"></div>
+
+          {/* Image */}
+          <img
+            src={sysImg}
+            className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
+            alt="System Operation"
+          />
+        </div>
       </div>
-      <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center w-full px-6 py-10 ">
-        <Card>
-          <img src={sysImg} className="w-[97%]  h-full object-cover" alt="" />
-        </Card>
-      </div>
+
+      {/* Optional: Add Cards or Descriptions Below */}
+     
     </>
   );
 };

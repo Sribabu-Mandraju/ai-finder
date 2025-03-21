@@ -28,12 +28,8 @@ const Navbar: React.FC = () => {
     <div className="flex w-full  mx-auto justify-center items-center  ">
       <header className="fixed top-0  max-w-6xl mx-auto flex items-center w-full h-[80px] py-4  h-max flex-row justify-between mx-8  z-50">
         {/* Logo */}
-        <div className="mx-2" onClick={() => window.location.href = '/'}>
-          <img
-            src={tasklogo}
-            alt="Task Logo"
-            className="md:w-auto mx-2 w-[100px] h-[50px]"
-          />
+        <div className="mx-2" onClick={() => (window.location.href = "/")}>
+          <div className="h-2 px-2  text-2xl logo py-2">TranscandenceAI</div>
         </div>
 
         {/* Desktop Navigation */}
@@ -64,7 +60,7 @@ const Navbar: React.FC = () => {
             className="lg:hidden text-white mx-2 transition-colors duration-200"
             aria-label="Toggle mobile menu"
           >
-            <RiMenu2Fill  size={24} />
+            <RiMenu2Fill size={24} />
           </button>
         </div>
 
