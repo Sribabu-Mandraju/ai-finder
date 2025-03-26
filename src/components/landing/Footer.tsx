@@ -2,7 +2,23 @@ import { FaTelegramPlane } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaXTwitter, FaDiscord } from "react-icons/fa6";
 
+
+interface NavItem {
+  label: string;
+  href: string;
+}
+
 const Footer: React.FC = () => {
+
+  const navItems: NavItem[] = [
+    { label: "Home", href: "#Home" },
+    { label: "Products", href: "#Products" },
+    { label: "Tokenomics", href: "#Tokenomics" },
+    { label: "Roadmap", href: "#Roadmap" },
+    { label: "Docs", href: "#Docs" },
+    { label: "Testnet", href: "#Testnet" },
+  ];
+
   return (
     <footer className=" text-white py-10">
       <div className="container mx-auto flex flex-col items-center space-y-8">
@@ -31,14 +47,18 @@ const Footer: React.FC = () => {
         {/* Navigation Links */}
         <nav>
           <ul className="flex gap-5 flex-wrap text-sm justify-center font-medium uppercase tracking-wide">
-            {["Home", "Products", "Tokenomics", "Roadmap", "Docs"].map(
+            {navItems.map(
               (item, index) => (
                 <li key={index}>
                   <a
-                    href="#"
-                    className="hover:text-gray-400 transition-colors"
+                    href={item.href}
+                    className={`${
+                      item.label === "Testnet"
+                        ? "text-gray-500 font-semibold"
+                        : "hover:text-gray-400 transition-colors"
+                    }`}
                   >
-                    {item}
+                    {item.label}
                   </a>
                 </li>
               )
@@ -47,7 +67,7 @@ const Footer: React.FC = () => {
         </nav>
 
         {/* Copyright */}
-        <p className="text-sm text-gray-400">&copy; 2025 YourBrand. All rights reserved.</p>
+        <p className="text-sm text-gray-400">&copy; 2025 TranscandenceAI. All rights reserved.</p>
       </div>
     </footer>
   );

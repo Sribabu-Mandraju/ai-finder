@@ -10,20 +10,16 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <div className="mt-[70px]">
-        {" "}
-        <Hero />
-        <div className="mt-6"></div>
-        <Line />
-        <Products />
-        <Line />
-        <Tokenomics />
-        <Line />
-        <Roadmap />
-        <Line />
-        <System />
-        <Footer />
-      </div>
+      <Hero />
+      <Line />
+      <Products />
+      <Line />
+      <Tokenomics />
+      <Line />
+      <Roadmap />
+      <Line />
+      <System />
+      <Footer />
     </>
   );
 };

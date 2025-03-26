@@ -25,11 +25,11 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <div className="flex w-full  mx-auto justify-center items-center  ">
-      <header className="fixed top-0  max-w-6xl mx-auto flex items-center w-full h-[80px] py-4  h-max flex-row justify-between mx-8  z-50">
+    <div className="flex w-full  mx-auto justify-center items-center">
+      <header className="sticky top-0  max-w-6xl mx-auto flex items-center w-full h-[80px] py-4  h-max flex-row justify-between mx-8  z-50">
         {/* Logo */}
         <div className="mx-2" onClick={() => (window.location.href = "/")}>
-          <div className="h-2 px-2  text-2xl logo py-2">TranscandenceAI</div>
+          <div className="px-2  text-2xl logo py-2">TranscandenceAI</div>
         </div>
 
         {/* Desktop Navigation */}

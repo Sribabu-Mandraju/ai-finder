@@ -5,7 +5,7 @@ import { Transaction } from "@solana/web3.js"
 import { Buffer } from "buffer"
 import { connection, host } from '../../utils/constants'
 import EthIcon from "../../assets/solana.png"
-// import TokenIcon from "../assets/lyra.jpg"
+import TokenIcon from "../../assets/aitrans.png"
 import Web3Payments from "../../assets/web3payments.svg"
 
 const Widget = () => {
@@ -130,7 +130,7 @@ const Widget = () => {
   return (
     <div className="relative w-full max-w-[400px] z-[1] drop-shadow-[0_10px_6px_rgba(0,0,0,0.31)] bg-gray-900 rounded-xl border-2 border-teal-500">
       <div className="p-5">
-        <p className="text-center text-teal-400 font-gs-eb text-xl mb-4">Buy $LYRA Presale</p>
+        <p className="text-center text-teal-400 font-gs-eb text-xl mb-4">Buy $TAI Presale</p>
 
         <div className="w-full mx-auto">
           <div className="text-teal-500 flex items-center justify-between w-full counter bg-gray-800 rounded-t-[15px]">
@@ -170,7 +170,7 @@ const Widget = () => {
 
         <div className="mt-3 w-full mx-auto">
           <p className="text-teal-400 relative tracking-[1.5px] text-sm text-center mb-2 font-gs-m before:content-[''] before:w-[20%] before:h-[1px] before:bg-gray-700 before:absolute before:left-0 before:top-1/2 after:content-[''] after:w-[20%] after:h-[1px] after:bg-gray-700 after:absolute after:right-0 after:top-1/2">
-            1 $LYRA = {rate} SOL
+            1 $TAI = {rate} SOL
           </p>
 
           <div className="flex justify-between items-center gap-2">
@@ -232,7 +232,7 @@ const Widget = () => {
 
             <div>
               <div className="text-teal-300 mb-1 flex items-center justify-between">
-                <label className="tracking-[1] text-[13px] block font-gs-m">$LYRA You receive</label>
+                <label className="tracking-[1] text-[13px] block font-gs-m">$TAI You receive</label>
               </div>
 
               <div className="relative min-h-11 flex justify-between items-center gap-1 rounded-[30px] px-[15px] border-2 border-teal-500">
@@ -240,13 +240,13 @@ const Widget = () => {
                   {inputAmount != "" ? Number.parseFloat(inputAmount) / rate : "0"}
                 </div>
                 <div className="">
-                  {/* <img
+                  <img
                     src={TokenIcon || "/placeholder.svg"}
                     alt="Token Icon"
                     width={28}
                     height={28}
                     className="rounded-full border-2 border-teal-500 shadow-none w-[28px] h-[28px]"
-                  /> */}
+                  />
                 </div>
               </div>
             </div>

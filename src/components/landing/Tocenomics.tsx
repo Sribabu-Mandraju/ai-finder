@@ -59,7 +59,7 @@ const Tokenomics: React.FC = () => {
   );
 
   return (
-    <>
+    <div id="Tokenomics">
       <h2 className="text-center text-white text-3xl font-bold">TOKENOMICS</h2>
       <p className="text-center text-gray-400 mt-2 px-5">
         A total supply of 10,000,000,000 $FAI token will be allocated as below:
@@ -107,7 +107,7 @@ const Tokenomics: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

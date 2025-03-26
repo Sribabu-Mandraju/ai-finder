@@ -87,7 +87,7 @@ const Products: React.FC = () => {
   };
 
   return (
-    <div className="w-screen text-white py-12" id="Products">
+    <div className="w-full text-white py-12" id="Products">
       <div className="flex flex-col w-full items-center gap-12 px-6 lg:px-20">
         <h2 className="text-4xl font-extrabold tracking-wide text-white">
           OUR PRODUCTS

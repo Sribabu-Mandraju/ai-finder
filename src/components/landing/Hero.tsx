@@ -5,7 +5,7 @@ import Widget from "../widgets/Widget";
 
 const Hero: React.FC = () => {
   return (
-    <div className="w-full h-screen flex flex-wrap justify-center items-center text-center text-white overflow-hidden">
+    <div className="w-full md:h-screen flex flex-wrap justify-center items-center text-center text-white overflow-hidden" id="Home">
       {/* Background Image */}
       <div className="my-2">
         <Widget />
@@ -28,10 +28,10 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8"
         >
-          Be part of the revolution with $LYRA. Invest in the next generation of blockchain technology and secure your financial freedom today.
+          Be part of the revolution with $TranscandenceAI. Invest in the next generation of blockchain technology and secure your financial freedom today.
         </motion.p>
 
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
           <button className="flex items-center justify-center px-8 py-3 bg-gradient-to-r from-teal-500 to-blue-600 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-blue-700 transition-all duration-300">
             Get Started <FaArrowRight className="ml-2" />
           </button>
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   );
